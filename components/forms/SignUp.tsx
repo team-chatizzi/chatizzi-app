@@ -2,7 +2,7 @@
 import { Eye, EyeOff, Mail } from "lucide-react"
 import Link from "next/link"
 import React, { useState } from "react"
-import Select from "@/components/selects/Select"
+import Select from "@/components/Selects/Select"
 
 const FormSignUp = () => {
   const [password, setPassword] = useState(false)

@@ -1,6 +1,6 @@
-import Copyright from '@/components/copyright/Copyright'
-import FormLogin from '@/components/forms/Login'
-import Logo from '@/components/logo/Logo'
+import Copyright from '@/components/Copyright/Copyright'
+import FormLogin from '@/components/Forms/Login'
+import Logo from '@/components/Logo/Logo'
 import React from 'react'
 
 const LoginPage = () => {
