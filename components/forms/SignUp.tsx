@@ -2,14 +2,14 @@
 import { Eye, EyeOff, Mail } from "lucide-react"
 import Link from "next/link"
 import React, { useState } from "react"
-import Select from "@/components/Selects/Select"
+// import Select from "@/components/Selects/Select"
 import { AuthGoogle } from "../Auth/auth-button-google"
 
 const FormSignUp = () => {
   const [password, setPassword] = useState(false)
-  const handleSelectChange = (value: string) => { }
+  // const handleSelectChange = (value: string) => { }
 
-  const options = ["Cursos online", "HHRR", "Marketing", "Mensajeria"]
+  // const options = ["Cursos online", "HHRR", "Marketing", "Mensajeria"]
   return (
     <div className="flex max-w-xs flex-col gap-3 sm:max-w-sm md:px-0 md:pb-4 2xl:max-w-md">
       <div className="flex flex-col gap-1 text-dark">
@@ -29,14 +29,14 @@ const FormSignUp = () => {
       <div className="flex flex-col gap-4 text-dark">
         <div className="flex flex-col gap-1">
           <label htmlFor="email" className="text-sm font-medium text-dark/90">
-            Correo empresarial
+            Correo
           </label>
           <div className="relative flex items-center rounded-lg border bg-white p-2 duration-200 hover:border-purple/60 has-[input:focus]:border-purple/80">
             <input
               id="email"
               className="flex-grow bg-transparent pe-7 text-sm outline-none placeholder:text-dark/30 md:text-base"
               type="email"
-              placeholder="email@company.com"
+              placeholder="email@gmail.com"
             />
             <Mail
               size={18}
@@ -45,41 +45,41 @@ const FormSignUp = () => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-1">
-          <div className="flex gap-3 text-dark/90">
-            <label htmlFor="password" className="w-full text-sm font-medium">
-              Contraseña
-            </label>
-            <label htmlFor="type" className="w-full text-sm font-medium">
-              Tipo de trabajo
-            </label>
-          </div>
-          <div className="w-full flex gap-2 justify-between">
-            <div className="relative w-full flex items-center rounded-lg border bg-white p-2 duration-200 hover:border-purple/60 has-[input:focus]:border-purple/80">
-              <input
-                id="password"
-                className="bg-transparent w-full pe-7 text-sm outline-none placeholder:text-dark/30 md:text-base"
-                type={password ? 'text' : "password"}
-                placeholder="••••••••••••••"
-              />
-              {password
-                ? (
-                  <Eye
-                    onClick={() => { setPassword(false) }}
-                    size={18}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 transform cursor-pointer text-dark/50"
-                  />
-                  )
-                : (
-                  <EyeOff
-                    onClick={() => { setPassword(true) }}
-                    size={18}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 transform cursor-pointer text-dark/50"
-                  />
-                  )}
+        <div className="flex gap-1">
+          <div className="flex flex-col gap-1 w-full">
+            <div className="flex gap-3 text-dark/90">
+              <label htmlFor="password" className="w-full text-sm font-medium">
+                Contraseña
+              </label>
             </div>
-            <Select options={options} onChange={handleSelectChange} />
+            <div className="w-full flex gap-2 justify-between">
+              <div className="relative w-full flex items-center rounded-lg border bg-white p-2 duration-200 hover:border-purple/60 has-[input:focus]:border-purple/80">
+                <input
+                  id="password"
+                  className="bg-transparent w-full pe-7 text-sm outline-none placeholder:text-dark/30 md:text-base"
+                  type={password ? 'text' : "password"}
+                  placeholder="••••••••••••••"
+                />
+                {password
+                  ? (
+                    <Eye
+                      onClick={() => { setPassword(false) }}
+                      size={18}
+                      className="absolute right-3 top-1/2 -translate-y-1/2 transform cursor-pointer text-dark/50"
+                    />
+                    )
+                  : (
+                    <EyeOff
+                      onClick={() => { setPassword(true) }}
+                      size={18}
+                      className="absolute right-3 top-1/2 -translate-y-1/2 transform cursor-pointer text-dark/50"
+                    />
+                    )}
+              </div>
+
+            </div>
           </div>
+          {/* <Select options={options} onChange={handleSelectChange} /> */}
         </div>
 
         <div className="flex gap-2">
@@ -117,7 +117,7 @@ const FormSignUp = () => {
       </div>
 
       <div className="flex flex-col gap-2">
-        <button className="flex w-full items-center justify-center gap-2 rounded-lg  bg-purple p-2 text-sm font-medium text-white duration-200  hover:bg-purple/85">
+        <button className="flex w-full items-center justify-center gap-2 rounded-lg  bg-purple p-[10px] text-sm font-medium text-white duration-200  hover:bg-purple/85">
           Empezar ahora
         </button>
       </div>
